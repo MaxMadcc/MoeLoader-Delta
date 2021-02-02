@@ -656,7 +656,7 @@ namespace MoeLoaderDelta
                 wstr += "[异常对象]: " + webExcp.Source + "\r\n";
                 wstr += "[调用堆栈]: " + webExcp.StackTrace.Trim() + "\r\n";
                 wstr += "[触发方法]: " + webExcp.TargetSite + "\r\n";
-
+                wstr += "[错误状态]: " + webExcp.Status.ToString() + "\r\n";
                 HttpWebResponse rsp = (HttpWebResponse)webExcp.Response;
                 if (rsp != null)
                 {
